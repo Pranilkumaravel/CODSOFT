@@ -13,6 +13,8 @@ import os
 for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
+from google.colab import files
+uploaded = files.upload()
 df = pd.read_csv(list(uploaded.keys())[0])
 df.head()
 df.info()
